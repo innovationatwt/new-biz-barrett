@@ -6,7 +6,7 @@ import cors from "cors";
 import peopleRoutes from "./routes/people.js";
 
 const app = express();
-
+const PORT = process.env.PORT || 8000;
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
@@ -15,7 +15,6 @@ app.use("/user", peopleRoutes);
 
 const CONNECTION_URL =
   "mongodb+srv://ethio:%40ethio2023@cluster0.gnn9az0.mongodb.net/MBTSDB";
-const PORT = process.env.PORT || 3000;
 
 mongoose
   .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
