@@ -14,7 +14,7 @@ app.use("/user", peopleRoutes);
 
 const CONNECTION_URL =
   process.env.MONGO_URL ||
-  "mongodb+srv://innovationatwt:%40Megha2024@cluster0.gnn9az0.mongodb.net/test";
+  "mongodb+srv://innovationatwt:%40Megha2024@cluster0.gnn9az0.mongodb.net/MBTSDB";
 const PORT = process.env.PORT || 8080;
 
 mongoose
